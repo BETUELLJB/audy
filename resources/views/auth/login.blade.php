@@ -13,8 +13,6 @@
             @csrf
 
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-800">Bem-vindo de volta</h2>
-                <p class="text-gray-500 mt-2">Faça login para continuar</p>
             </div>
 
             <div>
@@ -62,9 +60,13 @@
 
             <div>
                 <button type="submit" 
-                    class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:opacity-90 transition-all">
-                    <i class="fas fa-sign-in-alt mr-2"></i>Entrar
+                    style="width: 100%; background-color: #2496be; color: white; padding: 8px; border-radius: 8px; transition: opacity 0.3s;" 
+                    onmouseover="this.style.opacity='0.9'" 
+                    onmouseout="this.style.opacity='1'">
+                    <i class="fas fa-sign-in-alt" style="margin-right: 8px;"></i>Acessar
                 </button>
+
+
             </div>
 
             <div class="relative my-4">
@@ -76,17 +78,16 @@
                 </div>
             </div>
 
+            <!-- Botão para Google -->
             <div class="flex space-x-4">
-                <a href="{{ route('auth.github') }}" 
-                    class="w-full flex items-center justify-center bg-black text-white py-3 rounded-lg hover:bg-gray-800">
-                    <i class="fab fa-github mr-2"></i>Entrar com GitHub
-                </a>
-                
-                <a href="{{ route('register') }}" 
-                    class="w-full flex items-center justify-center bg-green-500 text-white py-3 rounded-lg hover:bg-green-600">
-                    <i class="fas fa-user-plus mr-2"></i>Registrar
+                <a href="{{ route('google.login') }}" 
+                    class="w-full flex items-center justify-center bg-white text-gray-800 border border-gray-300 py-3 rounded-lg hover:bg-gray-100 shadow">
+                    <img src="{{ asset('img/google.png') }}" alt="Google Logo" class="h-10 w-10 mr-2">
+
+                    <span class="font-medium">Entrar com Google</span>
                 </a>
             </div>
+
         </form>
     </div>
 

@@ -82,7 +82,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -96,6 +97,7 @@ return [
     */
 
     'fallback_locale' => 'en',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -211,6 +213,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ])->toArray(),
 
 ];
